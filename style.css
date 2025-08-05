@@ -1,0 +1,25 @@
+body{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 90vh;
+    overscroll-behavior: none;
+}
+
+
+.game-con{
+    max-width: 450px;
+}
+
+.grid-con{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-con > div{
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    margin: 5px;
+}
