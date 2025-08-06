@@ -6,6 +6,10 @@ body{
     overscroll-behavior: none;
 }
 
+html{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(49, 49, 49);
+}
 
 .game-con{
     max-width: 450px;
@@ -21,5 +25,14 @@ body{
     width: 80px;
     height: 80px;
     border: 2px solid black;
-    margin: 5px;
+    margin: 2px;
+    font-size: 4rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
+
+.grid-con > div:hover{
+    border-color: rgb(165, 165, 165);
+}
+
