@@ -21,6 +21,10 @@ html{
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.block-click{
+    pointer-events: none;
+}
+
 .grid-con > div{
     width: 80px;
     height: 80px;
