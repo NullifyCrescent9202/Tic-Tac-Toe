@@ -19,10 +19,9 @@ function gameBoard(){
 
             function check(cellgrid, marker, index_1, index_2, index_3){
                 if(getMarker(cellgrid[index_1]) === marker && getMarker(cellgrid[index_2]) === marker && getMarker(cellgrid[index_3]) === marker){
-                    console.log(marker + " Wins")
-                    gameOver = true;
+                    alert(marker + " Wins");
                     gridContainer.classList.add("block-click");
-
+                    gameOver = true;
 
                 };
             };
@@ -36,8 +35,8 @@ function gameBoard(){
                 
                 //Check Columns
                 check(grid, marker, 0, 3, 6);
-                check(grid, marker, 1, 4, 6);
-                check(grid, marker, 2, 5, 7);
+                check(grid, marker, 1, 4, 7);
+                check(grid, marker, 2, 5, 8);
 
                 //Check Crosses
                 check(grid, marker, 0, 4, 8);
@@ -52,16 +51,11 @@ function gameBoard(){
 
         CPU(){
             if(gameOver != true){
-                function randInt(){
-                    return Math.floor(Math.random() * 9);
-                };
-                let index = randInt();
-                let cell = this.grid[index];
-                if(cell.textContent === ""){
-                    cell.textContent = "O";
-                } else {
-                    this.CPU();
-                }
+                let cell = this.grid;
+                let emptyCells = Array.from(cell).filter((elem) => elem.textContent === "");
+                let len = emptyCells.length;
+                randomCell = emptyCells[Math.floor(Math.random() * len)];
+                randomCell.textContent = "O"
                 this.round++;
                 this.winStatus("O");
             } else {}
@@ -87,5 +81,4 @@ function gameBoard(){
 let gameOver = false;
 const board = gameBoard();
 board.addPlayerEvents();
-board.getBoard();
 
