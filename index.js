@@ -9,7 +9,7 @@ function gameBoard(){
 
         winStatus(unit){
             const gridContainer = document.querySelector(".grid-con"); 
-
+            const alert = document.querySelector(".alert");
 
             function getMarker(cell){
                 return cell.textContent;
@@ -19,7 +19,7 @@ function gameBoard(){
 
             function check(cellgrid, marker, index_1, index_2, index_3){
                 if(getMarker(cellgrid[index_1]) === marker && getMarker(cellgrid[index_2]) === marker && getMarker(cellgrid[index_3]) === marker){
-                    alert(marker + " Wins");
+                    alert.textContent = `${marker} Wins`;
                     gridContainer.classList.add("block-click");
                     gameOver = true;
 

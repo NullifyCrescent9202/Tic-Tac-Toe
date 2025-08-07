@@ -29,6 +29,7 @@ html{
     width: 80px;
     height: 80px;
     border: 2px solid black;
+    border-radius: 5px;
     margin: 2px;
     font-size: 4rem;
     display: grid;
@@ -40,3 +41,23 @@ html{
     border-color: rgb(165, 165, 165);
 }
 
+button{
+    justify-self: center;
+    margin-top: 10px;
+    max-width: 200px;
+    padding: 20px 20px 20px 20px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.813);
+    color: white;
+}
+
+button:active{
+    background-color: rgba(0, 0, 0, 0.662);
+}
+
+h2{
+    margin-top: 20px;
+    justify-self: center;
+    color: rgba(0, 0, 0, 0.721);
+}
